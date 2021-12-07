@@ -63,7 +63,7 @@ def loginuser(request):
             return render(request, 'todo/loginuser.html', {'form': AuthenticationForm(), "error": "User do not exist"})
 
 @login_required
-def createtodos(request):
+def createtodo(request):
     if request.method == 'GET':
         return render(request, 'todo/createtodo.html', {'form': TodoForm()})
     else:
