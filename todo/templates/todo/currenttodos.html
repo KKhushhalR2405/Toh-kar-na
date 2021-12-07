@@ -4,9 +4,11 @@
 
 <ul>
     {% for todo in todos %}
+    <a href = "{% url 'viewtodo' todo.id %}">
     <li> {% if todo.important %}<b>{% endif %}{{todo.title}} {% if todo.important %}</b>{% endif %}
         {% if todo.memo %} - {{todo.memo}}{% endif %}
     </li>
+    </a>
     {% endfor %}
 </ul>
 
