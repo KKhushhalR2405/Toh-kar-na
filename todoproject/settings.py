@@ -131,4 +131,4 @@ LOGIN_URL = '/login'
 
 # Heroku Deployment
 
-django_heroku.seetings(locals())
+django_heroku.settings(locals())
