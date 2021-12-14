@@ -1,1 +1,3 @@
-web gunicorn todoapp.wsgi:application --log-file -
+web: gunicorn todoapp.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
